@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HackAssas - Location</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+    .mobile-menu-panel {
+      transform-origin: bottom;
+      transform: scaleY(0);
+      opacity: 0;
+      transition: transform 200ms ease, opacity 200ms ease;
+      pointer-events: none;
+    }
+    .mobile-menu-panel.open {
+      transform: scaleY(1);
+      opacity: 1;
+      pointer-events: auto;
+    }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#D4AF37",
+            "background-light": "#F5F5DC",
+            "background-dark": "#0B1C3D",
+            "deep-red": "#8B0000",
+          },
+          fontFamily: {
+            "display": ["Manrope", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          backgroundImage: {
+            'circuit-pattern': "url('data:image/svg+xml,%3Csvg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"%3E%3Cpath d=\"M10 10 H90 V90 H10 Z\" fill=\"none\" stroke=\"rgba(212,175,55,0.05)\" stroke-width=\"1\"/%3E%3Cpath d=\"M20 20 H80 M20 30 H80 M20 40 H80 M20 50 H80 M20 60 H80 M20 70 H80 M20 80 H80\" fill=\"none\" stroke=\"rgba(212,175,55,0.05)\" stroke-width=\"0.5\"/%3E%3Cpath d=\"M30 20 V80 M40 20 V80 M50 20 V80 M60 20 V80 M70 20 V80\" fill=\"none\" stroke=\"rgba(212,175,55,0.05)\" stroke-width=\"0.5\"/%3E%3C/svg%3E')"
+          }
+        },
+      },
+    }
+  </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#0B1C3D] dark:text-[#F5F5DC]">
+<div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="flex flex-1 justify-center">
+<div class="layout-content-container flex flex-col w-full flex-1">
+<header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/20 px-4 sm:px-10 lg:px-20 py-4 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
+<a class="flex items-center gap-4 text-primary" href="../page_d%27accueil/Acceuil.html">
+<div class="size-6">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold leading-tight tracking-[-0.015em] dark:text-white">HackAssas</h2>
+</a>
+<nav class="hidden md:flex flex-1 justify-center gap-8 md:ml-12">
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="../page_d%27accueil/Acceuil.html">Accueil</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="../A%20propos/APropos.html">À propos</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="../Calendrier/Calendrier.html">Calendrier</a>
+<a class="text-sm font-bold leading-normal text-primary transition-colors" href="Location.html">Location</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="../FAQ/FAQ.html">FAQ</a>
+<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="../Sponsor%20/Sponsor.html">Sponsor</a>
+</nav>
+<div class="flex items-center gap-3 md:ml-10">
+<div class="hidden md:flex items-center gap-2">
+<a aria-label="Discord" class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-transparent text-current hover:bg-primary/10 transition-colors" href="#">
+<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 28 21" xmlns="http://www.w3.org/2000/svg"><path d="M23.0212 1.625C21.4326 0.940625 19.7439 0.40625 18.0053 0.05C17.8052 0.46875 17.5851 0.959375 17.4049 1.4C15.2243 1.05625 13.0137 1.05625 10.8331 1.4C10.6529 0.959375 10.4328 0.46875 10.2327 0.05C8.49413 0.40625 6.80547 0.940625 5.21685 1.625C1.56236 6.3125 -0.0964286 10.8219 0.003625 15.3375C2.63059 16.8531 5.17736 17.8406 7.7042 18.375C8.20455 17.7531 8.65486 17.0812 9.02507 16.3688C8.16462 16.1406 7.34416 15.8625 6.55373 15.5344C6.72382 15.425 6.8839 15.3 7.044 15.175C11.5378 17.3875 16.7183 17.3875 21.192 15.175C21.3521 15.3 21.5122 15.425 21.6823 15.5344C20.8919 15.8625 20.0714 16.1406 19.211 16.3688C19.5812 17.0812 20.0315 17.7531 20.5318 18.375C23.0587 17.8406 25.6055 16.8531 28.2324 15.3375C28.3825 10.0594 26.2418 5.75313 23.0212 1.625ZM9.25597 13.1125C8.13538 13.1125 7.21487 12.0969 7.21487 10.8375C7.21487 9.57813 8.11535 8.5625 9.25597 8.5625C10.3966 8.5625 11.3171 9.57813 11.2871 10.8375C11.2871 12.0969 10.3966 13.1125 9.25597 13.1125ZM18.9841 13.1125C17.8635 13.1125 16.943 12.0969 16.943 10.8375C16.943 9.57813 17.8434 8.5625 18.9841 8.5625C20.1247 8.5625 21.0452 9.57813 21.0152 10.8375C21.0152 12.0969 20.1247 13.1125 18.9841 13.1125Z"></path></svg>
+</a>
+<a aria-label="LinkedIn" class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-transparent text-current hover:bg-primary/10 transition-colors" href="#">
+<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+<a aria-label="Instagram" class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-transparent text-current hover:bg-primary/10 transition-colors" href="#">
+<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849 .149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"></path></svg>
+</a>
+</div>
+<div class="md:hidden relative" data-menu-container>
+<button class="flex items-center justify-center rounded-lg border border-primary/40 p-2 text-primary hover:bg-primary/10 transition-colors" type="button" aria-expanded="false" aria-label="Ouvrir le menu" data-menu-toggle>
+<span class="material-symbols-outlined" data-menu-icon>menu</span>
+</button>
+<div class="mobile-menu-panel absolute right-0 mt-3 w-48 rounded-xl border border-primary/30 bg-background-light/95 dark:bg-background-dark/95 shadow-2xl" data-menu-panel>
+<a class="block px-4 py-2 text-sm font-medium hover:bg-primary/10 transition-colors" href="../page_d%27accueil/Acceuil.html">Accueil</a>
+<a class="block px-4 py-2 text-sm font-medium hover:bg-primary/10 transition-colors" href="../A%20propos/APropos.html">À propos</a>
+<a class="block px-4 py-2 text-sm font-medium hover:bg-primary/10 transition-colors" href="../Calendrier/Calendrier.html">Calendrier</a>
+<a class="block px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/10 transition-colors" href="Location.html">Location</a>
+<a class="block px-4 py-2 text-sm font-medium hover:bg-primary/10 transition-colors" href="../FAQ/FAQ.html">FAQ</a>
+<a class="block px-4 py-2 text-sm font-medium hover:bg-primary/10 transition-colors" href="../Sponsor%20/Sponsor.html">Sponsor</a>
+</div>
+</div>
+</div>
+</header>
+<main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
+<section class="mb-16 sm:mb-24 text-center">
+<h1 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-primary to-white mb-4">Un Lieu à la Croisée des Mondes</h1>
+<p class="max-w-3xl mx-auto text-lg sm:text-xl dark:text-white/80">HackAssas se déroule au cœur de Paris, un lieu emblématique où l'histoire rencontre l'avenir, offrant un cadre inspirant pour une nuit d'innovation.</p>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-1 space-y-8">
+<div class="p-6 bg-background-light dark:bg-background-dark/50 dark:border dark:border-primary/20 rounded-xl shadow-lg relative overflow-hidden bg-circuit-pattern">
+<h2 class="text-2xl font-bold text-primary mb-4">Le Panthéon</h2>
+<p class="dark:text-white/90 mb-4">Au cœur du Quartier Latin, le Centre Panthéon de l'Université Paris-Panthéon-Assas nous ouvre ses portes. Un lieu chargé d'histoire, transformé pour l'occasion en un hub technologique vibrant.</p>
+<div class="flex items-start gap-3 mt-4">
+<span class="material-symbols-outlined text-primary mt-1">location_on</span>
+<p class="dark:text-white/90">12 Place du Panthéon, 75005 Paris, France</p>
+</div>
+<div class="flex items-start gap-3 mt-2">
+<span class="material-symbols-outlined text-primary mt-1">directions_subway</span>
+<p class="dark:text-white/90">Accès facile via RER B (Luxembourg) et Métro 10 (Cluny-La Sorbonne).</p>
+</div>
+</div>
+<div class="p-6 bg-background-light dark:bg-background-dark/50 dark:border dark:border-primary/20 rounded-xl shadow-lg">
+<h3 class="text-xl font-bold text-primary mb-3">Installations &amp; Équipements</h3>
+<ul class="space-y-3 dark:text-white/90">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">wifi</span> Wi-Fi Haut Débit &amp; Connexions Fibrées
+                    </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">power</span> Stations de recharge individuelles
+                    </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">chair</span> Espaces de travail modulables
+                    </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">coffee</span> Zones de repos et de restauration
+                    </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">security</span> Sécurité et support technique 24/24
+                    </li>
+</ul>
+</div>
+</div>
+<div class="lg:col-span-2 space-y-8">
+<div class="relative rounded-xl overflow-hidden shadow-2xl shadow-primary/10">
+<img alt="Façade majestueuse du Panthéon la nuit" class="w-full h-auto object-cover aspect-[16/9]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRYeu9Wf_WIDGfP0TDw6LLyZyryGvYv7DaAxfFF0-0d_f_mMturXi2coIxMvlP12BdAivy8lW9oJZdjxOE3jGjN0tWVv-bnkwcDh70ip6rBw8w_Zh3CV3YgCw1gDMTEFbQBWxmCF1x8iZBnYM65nbwsl9l3-7cOLHzdy5BZRnLjhjl6ohLBBjVn68JF47DYbYbSNzX_WVAlPLYEOOHkgXsMDYfamaZ19nvWRcv121rgcuTGGWeq6BsRVxkNUN9_TkJ_hWdXCevHQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/70 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<h3 class="text-white text-3xl font-bold">Centre Panthéon-Assas</h3>
+<p class="text-white/80">Là où le savoir d'hier propulse les innovations de demain.</p>
+</div>
+</div>
+<div class="rounded-xl overflow-hidden shadow-lg h-80 w-full">
+<iframe class="w-full h-full border-0 grayscale invert hue-rotate-180" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.641324151761!2d2.344005315673945!3d48.84626157928637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671e888fbfa8d%3A0x289743c3d56d2528!2sPanth%C3%A9on!5e0!3m2!1sfr!2sfr!4v1620211111111!5m2!1sfr!2sfr"></iframe>
+</div>
+</div>
+</div>
+</main>
+<footer class="flex flex-col gap-10 px-5 py-16 text-center @container mt-16 sm:mt-24 border-t border-primary/20">
+<div class="flex flex-col md:flex-row items-center justify-around gap-8">
+<div class="flex flex-col items-center md:items-start gap-4 max-w-xs text-center md:text-left">
+<a class="flex items-center gap-4 text-primary" href="../page_d%27accueil/Acceuil.html">
+<div class="size-6">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold leading-tight tracking-[-0.015em] dark:text-white">HackAssas</h2>
+</a>
+<p class="text-sm dark:text-white/70">L'événement qui réunit les esprits les plus brillants au cœur de Paris pour une nuit d'innovation, de code et de créativité.</p>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 @[480px]:flex-row @[480px]:justify-around">
+<div class="flex flex-col gap-3 text-center md:text-left">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="../page_d%27accueil/Acceuil.html">Accueil</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="../A%20propos/APropos.html">À propos</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="../Calendrier/Calendrier.html">Calendrier</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="Location.html">Location</a>
+</div>
+<div class="flex flex-col gap-3 text-center md:text-left">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="../FAQ/FAQ.html">FAQ</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="../Sponsor%20/Sponsor.html">Sponsor</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Politique de confidentialité</a>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6 items-center border-t border-primary/20 pt-8">
+<div class="flex items-center gap-4">
+<a aria-label="Discord" class="text-current hover:text-primary transition-colors" href="#">
+<svg class="h-6 w-6" fill="currentColor" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Discord</title><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8852-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4464.8254-.618 1.32-.2281.6327-.3939 1.2825-.5118 1.9562-1.8416-.2562-3.61-.2562-5.4515 0-.1179-.6737-.2837-1.3235-.5118-1.9562-.1716-.4946-.407-1.009-.618-1.32a.0741.0741 0 00-.0785-.0371 19.7913 19.7913 0 00-4.8852 1.5152.069.069 0 00-.032.0599c-1.18 4.7945-1.1408 9.5385.093 14.2158a.069.069 0 00.0632.0599c1.4225.4644 2.8473.8441 4.2828 1.1444a.0741.0741 0 00.086-.052c.2874-.633.54-1.2824.7578-1.9561a.0741.0741 0 00-.044-.086c-.4946-.1715-.9738-.343-1.4379-.5225a.0741.0741 0 01-.021-.086c.0105-.021.031-.031.041-.021.3255.118.6327.236.94.343a.0741.0741 0 00.086-.044c.456-1.0282.8441-2.12.8441-2.12s-.4464.3255-.8441.6327a.0741.0741 0 00-.044.128c1.381.6539 3.3284 1.2187 5.3746 1.2187 2.0462 0 3.9936-.5648 5.3746-1.2187a.0741.0741 0 00-.044-.128c-.3977-.3072-.8441-.6327-.8441-.6327s.3877 1.0918.8441 2.12a.0741.0741 0 00.086.044c.3072-.107.6144-.225.94-.343a.0741.0741 0 01.041.021.0741.0741 0 01-.021.086c-.4641.1795-.9433.351-1.4379.5225a.0741.0741 0 00-.044.086c.2178.6737.4704 1.3234.7578 1.9561a.0741.0741 0 00.086.052c1.4355-.3003 2.86-.68 4.2828-1.1444a.069.069 0 00.0632-.0599c1.2338-4.6773 1.273-9.4213.093-14.2158a.069.069 0 00-.032-.0599zM8.02 15.3312c-.7824 0-1.4225-1.1013-1.4225-2.4552s.6401-2.4552 1.4225-2.4552c.7824 0 1.4225 1.1013 1.4225 2.4552.0105 1.3539-.6401 2.4552-1.4225 2.4552zm7.9548 0c-.7824 0-1.4225-1.1013-1.4225-2.4552s.6401-2.4552 1.4225-2.4552c.7824 0 1.4225 1.1013 1.4225 2.4552s-.6401 2.4552-1.4225 2.4552z"></path></svg>
+</a>
+<a aria-label="LinkedIn" class="text-current hover:text-primary transition-colors" href="#">
+<svg class="h-6 w-6" fill="currentColor" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg>
+</a>
+<a aria-label="Instagram" class="text-current hover:text-primary transition-colors" href="#">
+<svg class="h-6 w-6" fill="currentColor" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Instagram</title><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.314.935 20.644.523 19.86.227 19.094-.06 18.223-.082 16.947-.143 15.667-.201 15.26-.215 12-.215zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.06 1.17-.249 1.805-.413 2.227-.217.562-.477.96-.896 1.382-.42.419-.82.679-1.38.896-.423.164-1.057.36-2.227.413-1.266.057-1.646.07-4.85.07s-3.585-.015-4.85-.07c-1.17-.06-1.805-.249-2.227-.413-.562-.217-.96-.477-1.382-.896-.419-.42-.679-.82-896-1.38-.164-.423-.36-1.057-.413-2.227-.057-1.266-.07-1.646-.07-4.85s.015-3.585.07-4.85c.06-1.17.25-1.805.413-2.227.217-.562.477-.96.896-1.382.42-.419.819-.679 1.381-.896.422-.164 1.057-.36 2.227-.413 1.266-.057 1.646-.07 4.85-.07zM12 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"></path></svg>
+</a>
+</div>
+<p class="text-sm dark:text-white/60">© 2026 HackAssas. Tous droits réservés.</p>
+</div>
+</footer>
+</div>
+</div>
+</div>
+</div>
+
+<script>
+  (function () {
+    const instances = [];
+
+    document.querySelectorAll('[data-menu-container]').forEach((container) => {
+      const toggle = container.querySelector('[data-menu-toggle]');
+      const panel = container.querySelector('[data-menu-panel]');
+      const icon = container.querySelector('[data-menu-icon]');
+
+      if (!toggle || !panel) return;
+
+      const instance = { toggle, panel, icon };
+      instances.push(instance);
+      toggle.setAttribute('aria-expanded', 'false');
+
+      toggle.addEventListener('click', (event) => {
+        event.stopPropagation();
+        const isOpen = panel.classList.contains('open');
+        instances.forEach(closeMenu);
+        if (!isOpen) {
+          openMenu(instance);
+        }
+      });
+    });
+
+    document.addEventListener('click', () => {
+      instances.forEach(closeMenu);
+    });
+
+    function openMenu({ toggle, panel, icon }) {
+      panel.classList.add('open');
+      toggle.setAttribute('aria-expanded', 'true');
+      if (icon) icon.textContent = 'close';
+    }
+
+    function closeMenu({ toggle, panel, icon }) {
+      panel.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      if (icon) icon.textContent = 'menu';
+    }
+  }());
+</script>
+</body></html>
