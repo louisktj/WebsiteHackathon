@@ -62,7 +62,8 @@
 <div class="flex flex-1 justify-center">
 <div class="layout-content-container flex flex-col w-full flex-1">
 <header class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/20 px-4 sm:px-10 lg:px-20 py-4 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm">
-<a class="flex items-center gap-4 text-primary" href="/index.html">
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-1 sm:gap-3 text-primary flex-shrink-0">
+<a class="flex items-center gap-3 text-primary flex-shrink-0" href="/index.html">
 <div class="size-6">
 <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
 <path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
@@ -70,7 +71,9 @@
 </div>
 <h2 class="text-xl font-bold leading-tight tracking-[-0.015em] dark:text-white">Paris Innov’Hack</h2>
 </a>
-<nav class="hidden md:flex flex-1 justify-center gap-8 md:ml-12">
+<img alt="Logo Eugénia School" class="block h-6 w-auto sm:h-7" src="../Assets/Eugenialogo2.png"/>
+</div>
+<nav class="hidden lg:flex flex-1 justify-center gap-8 lg:ml-12">
 <a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="/index.html">Accueil</a>
 <a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="../A%20propos/APropos.html">À propos</a>
 <a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="../Calendrier/Calendrier.html">Calendrier</a>
@@ -90,39 +93,54 @@
 <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849 .149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"></path></svg>
 </a>
 </div>
-<div class="md:hidden relative" data-menu-container>
+<div class="lg:hidden relative" data-menu-container>
 <button class="flex items-center justify-center rounded-lg border border-primary/40 p-2 text-primary hover:bg-primary/10 transition-colors" type="button" aria-expanded="false" aria-label="Ouvrir le menu" data-menu-toggle>
 <span class="material-symbols-outlined" data-menu-icon>menu</span>
 </button>
-<div class="mobile-menu-panel absolute right-0 mt-3 w-48 rounded-xl border border-primary/30 bg-background-light/95 dark:bg-background-dark/95 shadow-2xl" data-menu-panel>
+<div class="mobile-menu-panel absolute right-0 mt-3 w-35 rounded-xl border border-primary/30 bg-background-light/95 dark:bg-background-dark/95 shadow-2xl" data-menu-panel>
 <a class="block px-4 py-2 text-sm font-medium hover:bg-primary/10 transition-colors" href="/index.html">Accueil</a>
 <a class="block px-4 py-2 text-sm font-medium hover:bg-primary/10 transition-colors" href="../A%20propos/APropos.html">À propos</a>
 <a class="block px-4 py-2 text-sm font-medium hover:bg-primary/10 transition-colors" href="../Calendrier/Calendrier.html">Calendrier</a>
 <a class="block px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/10 transition-colors" href="Location.html">Location</a>
 <a class="block px-4 py-2 text-sm font-medium hover:bg-primary/10 transition-colors" href="../FAQ/FAQ.html">FAQ</a>
 <a class="block px-4 py-2 text-sm font-medium hover:bg-primary/10 transition-colors" href="../Sponsor%20/Sponsor.html">Sponsor</a>
+<div class="flex flex-col items-start gap-2 px-4 py-3 border-t border-primary/20">
+<a aria-label="Discord" class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-transparent text-current hover:bg-primary/10 transition-colors" href="#">
+<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 28 21" xmlns="http://www.w3.org/2000/svg"><path d="M23.0212 1.625C21.4326 0.940625 19.7439 0.40625 18.0053 0.05C17.8052 0.46875 17.5851 0.959375 17.4049 1.4C15.2243 1.05625 13.0137 1.05625 10.8331 1.4C10.6529 0.959375 10.4328 0.46875 10.2327 0.05C8.49413 0.40625 6.80547 0.940625 5.21685 1.625C1.56236 6.3125 -0.0964286 10.8219 0.003625 15.3375C2.63059 16.8531 5.17736 17.8406 7.7042 18.375C8.20455 17.7531 8.65486 17.0812 9.02507 16.3688C8.16462 16.1406 7.34416 15.8625 6.55373 15.5344C6.72382 15.425 6.8839 15.3 7.044 15.175C11.5378 17.3875 16.7183 17.3875 21.192 15.175C21.3521 15.3 21.5122 15.425 21.6823 15.5344C20.8919 15.8625 20.0714 16.1406 19.211 16.3688C19.5812 17.0812 20.0315 17.7531 20.5318 18.375C23.0587 17.8406 25.6055 16.8531 28.2324 15.3375C28.3825 10.0594 26.2418 5.75313 23.0212 1.625ZM9.25597 13.1125C8.13538 13.1125 7.21487 12.0969 7.21487 10.8375C7.21487 9.57813 8.11535 8.5625 9.25597 8.5625C10.3966 8.5625 11.3171 9.57813 11.2871 10.8375C11.2871 12.0969 10.3966 13.1125 9.25597 13.1125ZM18.9841 13.1125C17.8635 13.1125 16.943 12.0969 16.943 10.8375C16.943 9.57813 17.8434 8.5625 18.9841 8.5625C20.1247 8.5625 21.0452 9.57813 21.0152 10.8375C21.0152 12.0969 20.1247 13.1125 18.9841 13.1125Z"></path></svg>
+</a>
+<a aria-label="LinkedIn" class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-transparent text-current hover:bg-primary/10 transition-colors" href="#">
+<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+<a aria-label="Instagram" class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 w-10 bg-transparent text-current hover:bg-primary/10 transition-colors" href="#">
+<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849 .149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"></path></svg>
+</a>
+</div>
 </div>
 </div>
 </div>
 </header>
-<a class="fixed top-20 sm:top-16 left-4 sm:left-auto sm:right-4 z-50 inline-flex items-center justify-center rounded-full px-5 py-3 text-sm sm:text-base font-bold text-white shadow-lg shadow-deep-red/40 bg-[#8B0000] hover:bg-[#6a0000] transition-colors" href="https://docs.google.com/forms/d/e/1FAIpQLSd_DV4iNpdf9NDWgQdl4KO0Nq3SD7DJcWzEopZogKYeRcTSTg/viewform" target="_blank" rel="noopener noreferrer">Inscris-toi maintenant</a>
+<a class="fixed top-24 left-4 right-auto z-50 inline-flex items-center justify-center rounded-full px-5 py-3 text-sm sm:text-base font-bold text-white shadow-lg shadow-deep-red/40 bg-[#8B0000] hover:bg-[#6a0000] transition-colors" href="https://docs.google.com/forms/d/e/1FAIpQLSd_DV4iNpdf9NDWgQdl4KO0Nq3SD7DJcWzEopZogKYeRcTSTg/viewform" target="_blank" rel="noopener noreferrer">Inscris-toi maintenant</a>
 <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
-<section class="mb-16 sm:mb-24 text-center">
-<h1 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-primary to-white mb-4">Un Lieu à la Croisée des Mondes</h1>
-<p class="max-w-3xl mx-auto text-lg sm:text-xl dark:text-white/80">Paris Innov’Hack se déroule au cœur de Paris, un lieu emblématique où l'histoire rencontre l'avenir, offrant un cadre inspirant pour une nuit d'innovation.</p>
+<section class="pt-8 sm:pt-12 mb-16 sm:mb-24 text-center">
+<h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-[1.25] sm:leading-[1.2] md:leading-[1.15] lg:leading-[1.12] tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-primary to-white mb-8 pb-1">Cap sur Eugenia School</h1>
+<p class="max-w-3xl mx-auto text-lg sm:text-xl dark:text-white/80 mt-4 sm:mt-6">Paris Innov’Hack se tiendra le 17 janvier 2026 à Eugénia School, au cœur de Paris, pour une nuit d'innovation dans un campus pensé pour l'entrepreneuriat tech.</p>
 </section>
 <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
 <div class="lg:col-span-1 space-y-8">
 <div class="p-6 bg-background-light dark:bg-background-dark/50 dark:border dark:border-primary/20 rounded-xl shadow-lg relative overflow-hidden bg-circuit-pattern">
-<h2 class="text-2xl font-bold text-primary mb-4">Le Panthéon</h2>
-<p class="dark:text-white/90 mb-4">Au cœur du Quartier Latin, le Centre Panthéon de l'Université Paris-Panthéon-Assas nous ouvre ses portes. Un lieu chargé d'histoire, transformé pour l'occasion en un hub technologique vibrant.</p>
+<h2 class="text-2xl font-bold text-primary mb-4">Eugenia School</h2>
+<p class="dark:text-white/90 mb-4">Le hackathon prend place dans l'écosystème d'Eugénia School, une école ancrée dans la tech et l'innovation. Un campus lumineux et modulable, idéal pour collaborer, prototyper et pitcher.</p>
+<div class="flex items-start gap-3 mt-4">
+<span class="material-symbols-outlined text-primary mt-1">event</span>
+<p class="dark:text-white/90">Rendez-vous le 17 janvier 2026 pour 10h d'énergie collective.</p>
+</div>
 <div class="flex items-start gap-3 mt-4">
 <span class="material-symbols-outlined text-primary mt-1">location_on</span>
-<p class="dark:text-white/90">12 Place du Panthéon, 75005 Paris, France</p>
+<p class="dark:text-white/90">Eugénia School, Paris — adresse précise envoyée aux participants.</p>
 </div>
 <div class="flex items-start gap-3 mt-2">
 <span class="material-symbols-outlined text-primary mt-1">directions_subway</span>
-<p class="dark:text-white/90">Accès facile via RER B (Luxembourg) et Métro 10 (Cluny-La Sorbonne).</p>
+<p class="dark:text-white/90">Accès simple en métro, bus ou vélo (intra-muros). Instructions détaillées partagées dans l'email de convocation.</p>
 </div>
 </div>
 <div class="p-6 bg-background-light dark:bg-background-dark/50 dark:border dark:border-primary/20 rounded-xl shadow-lg">
@@ -148,15 +166,15 @@
 </div>
 <div class="lg:col-span-2 space-y-8">
 <div class="relative rounded-xl overflow-hidden shadow-2xl shadow-primary/10">
-<img alt="Façade majestueuse du Panthéon la nuit" class="w-full h-auto object-cover aspect-[16/9]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRYeu9Wf_WIDGfP0TDw6LLyZyryGvYv7DaAxfFF0-0d_f_mMturXi2coIxMvlP12BdAivy8lW9oJZdjxOE3jGjN0tWVv-bnkwcDh70ip6rBw8w_Zh3CV3YgCw1gDMTEFbQBWxmCF1x8iZBnYM65nbwsl9l3-7cOLHzdy5BZRnLjhjl6ohLBBjVn68JF47DYbYbSNzX_WVAlPLYEOOHkgXsMDYfamaZ19nvWRcv121rgcuTGGWeq6BsRVxkNUN9_TkJ_hWdXCevHQ"/>
+<img alt="Campus d'Eugénia School à Paris" class="w-full h-auto object-cover aspect-[16/9]" src="../Assets/Location1.png"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background-dark/70 to-transparent"></div>
 <div class="absolute bottom-0 left-0 p-6">
-<h3 class="text-white text-3xl font-bold">Centre Panthéon-Assas</h3>
-<p class="text-white/80">Là où le savoir d'hier propulse les innovations de demain.</p>
+<h3 class="text-white text-3xl font-bold">Eugénia School, Paris</h3>
+<p class="text-white/80">Le terrain de jeu du hackathon du 17 janvier 2026.</p>
 </div>
 </div>
 <div class="rounded-xl overflow-hidden shadow-lg h-80 w-full">
-<iframe class="w-full h-full border-0 grayscale invert hue-rotate-180" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.641324151761!2d2.344005315673945!3d48.84626157928637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671e888fbfa8d%3A0x289743c3d56d2528!2sPanth%C3%A9on!5e0!3m2!1sfr!2sfr!4v1620211111111!5m2!1sfr!2sfr"></iframe>
+<iframe class="w-full h-full border-0 grayscale invert hue-rotate-180" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Eug%C3%A9nia%20School%20Paris&output=embed"></iframe>
 </div>
 </div>
 </div>
